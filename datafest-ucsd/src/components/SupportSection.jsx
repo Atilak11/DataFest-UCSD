@@ -16,7 +16,7 @@ const INVOLVEMENT_CARDS = [
     body: "Volunteer as a mentor! Sign up for 2-hour shifts during the event. Share your expertise and connect with talented undergrads.",
     cta: "Mentor Interest Form →",
     color: "#4caf90",
-    href:"https://forms.gle/TJThT7VhGA6jCfoJ9"
+    href:"https://docs.google.com/forms/d/e/1FAIpQLSctHVU1EhQMirRkBYfP7rqzvqZqNRkVNf_yUEhxEeUo0o2LRw/viewform"
   },
   {
     icon: "🏢",
@@ -62,13 +62,29 @@ function InvolvementCard({ card: c }) {
       <h3 style={{ color: "#fff", fontWeight: 700, marginBottom: 10 }}>{c.title}</h3>
       <p style={{ color: "#7a9ab8", lineHeight: 1.7, fontSize: 14, marginBottom: 20 }}>{c.body}</p>
       
-      <button style={{
-        background: "none", border: `1px solid ${c.color}`,
-        color: c.color, borderRadius: 8, padding: "10px 18px",
-        fontSize: 13, fontWeight: 600, cursor: "pointer",
-      }}>
-        {c.cta}
-      </button>
+      {c.href ? (
+        <a
+          href={c.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "inline-block", textDecoration: "none",
+            background: "none", border: `1px solid ${c.color}`,
+            color: c.color, borderRadius: 8, padding: "10px 18px",
+            fontSize: 13, fontWeight: 600, cursor: "pointer",
+          }}
+        >
+          {c.cta}
+        </a>
+      ) : (
+        <button style={{
+          background: "none", border: `1px solid ${c.color}`,
+          color: c.color, borderRadius: 8, padding: "10px 18px",
+          fontSize: 13, fontWeight: 600, cursor: "pointer",
+        }}>
+          {c.cta}
+        </button>
+      )}
     </div>
   );
 }

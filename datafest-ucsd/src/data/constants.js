@@ -16,11 +16,19 @@ export const NAV_LINKS = [
 ];
 
 export const SLIDES_PDF = [
-  
+  {
+    title: "Workshop 1 Slides",
+    description: "UES - Basics of R & Stata + Data Viz Intro",
+    file: "/slides/workshop1.pdf",
+    preview: "/slides/workshop1preview.png",
+    date: "Jan 16",
+    org: "UES",
+  },
   {
     title: "Workshop 2 Slides",
     description: "SIG - DataFest 2026 Info Meeting",
     file: "/slides/WorkshopTwo.pdf",
+    preview: "/slides/WorkshopTwoPrev.png",
     date: "Jan 30",
     org: "All",
   }
@@ -67,7 +75,7 @@ export const ANNOUNCEMENTS = [
   {
     date: "Feb 27, 2026",
     title: "Workshop #4 Slides Now Available",
-    body: "Slides from Blake Ellison's 'Working with Data' workshop are now posted in the Resources section below.",
+    body: "Slides from Blake Ellison's 'Working with Data' workshop are now posted in the Resources section above.",
     tag: "Workshop",
   },
   {

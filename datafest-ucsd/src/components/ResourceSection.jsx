@@ -1,4 +1,4 @@
-import { COLORS, SLIDES_PDF } from "../data/constants";
+import { COLORS } from "../data/constants";
 import { Section, SectionHeading, Tag } from "./ui";
 
 export function ResourceSection() {
@@ -11,10 +11,31 @@ export function ResourceSection() {
         sub="Download or view slides from each workshop to prepare for DataFest 2026."
       />
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 20 }}>
-        {SLIDES_PDF.map((slide) => (
-          <SlideCard key={slide.title} slide={slide} />
-        ))}
+      <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+        <SlideCard slide={{
+          title: "Workshop 1 Slides",
+          description: "UES - Basics of R & Stata + Data Viz Intro",
+          file: "/slides/workshop1.pdf",
+          preview: "/slides/workshop1preview.png",
+          date: "Jan 16",
+          org: "UES",
+        }} />
+        <SlideCard slide={{
+          title: "Workshop 2 Slides",
+          description: "SIG - DataFest 2026 Info Meeting",
+          file: "/slides/WorkshopTwo.pdf",
+          preview: "/slides/WorkshopTwoPrev.png",
+          date: "Jan 30",
+          org: "All",
+        }} />
+        <SlideCard slide={{
+          title: "Workshop 3 Slides",
+          description: "Intro to Machine Learning",
+          file: "/slides/workshop3.pdf",
+          preview: "/slides/workshop3prev.png",
+          date: "Feb 13",
+          org: "TQT × SIG",
+        }} />
       </div>
 
       <div style={{
@@ -47,56 +68,82 @@ function SlideCard({ slide }) {
       overflow: "hidden",
       boxShadow: "0 2px 12px rgba(0,98,155,.06)",
       opacity: isAvailable ? 1 : 0.6,
+      display: "flex",
+      flexDirection: "row",
+      width: "100%",
     }}>
       <div style={{
         background: isAvailable
           ? `linear-gradient(135deg, ${COLORS.ucsdBlue}, #0a3d6b)`
           : "#c0c0c0",
-        padding: "20px 24px",
-        display: "flex", justifyContent: "space-between", alignItems: "flex-start",
+        padding: "16px 24px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexShrink: 0,
       }}>
-        <div style={{ fontSize: 32 }}>📄</div>
-        <Tag color={isAvailable ? COLORS.ucsdGold : "#888"}>
-          {slide.org}
-        </Tag>
+        {slide.preview ? (
+          <img
+            src={slide.preview}
+            alt={`${slide.title} preview`}
+            style={{
+              width: 140,
+              height: 180,
+              objectFit: "contain",
+              borderRadius: 4,
+              display: "block",
+            }}
+          />
+        ) : (
+          <div style={{ fontSize: 32 }}>📄</div>
+        )}
       </div>
 
-      <div style={{ padding: "20px 24px" }}>
-        <div style={{ fontSize: 12, color: "#7a9ab8", marginBottom: 6 }}>{slide.date}</div>
-        <h3 style={{ fontWeight: 700, color: "#fff", marginBottom: 6, fontSize: 16 }}>
+      <div style={{
+        padding: "20px 28px",
+        flex: 1,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+      }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
+          <div style={{ fontSize: 12, color: "#7a9ab8" }}>{slide.date}</div>
+          <Tag color={isAvailable ? COLORS.ucsdGold : "#888"}>
+            {slide.org}
+          </Tag>
+        </div>
+        <h3 style={{ fontWeight: 700, color: "#fff", marginBottom: 6, fontSize: 18 }}>
           {slide.title}
         </h3>
-        <p style={{ fontSize: 13, color: "#9ab8d4", lineHeight: 1.6, margin: "0 0 20px" }}>
+        <p style={{ fontSize: 14, color: "#9ab8d4", lineHeight: 1.6, margin: "0 0 20px" }}>
           {slide.description}
         </p>
 
         {isAvailable ? (
-        <div style={{ display: "flex", gap: 10 }}>
+          <div style={{ display: "flex", gap: 10 }}>
             <a
-            href={slide.file}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-                flex: 1,
+              href={slide.file}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                padding: "10px 28px",
                 textAlign: "center",
                 display: "inline-block",
                 textDecoration: "none",
                 background: COLORS.ucsdBlue,
                 color: "#fff",
                 borderRadius: 8,
-                padding: "10px 0",
                 fontSize: 13,
                 fontWeight: 600,
-            }}
+              }}
             >
-            View Slides
+              View Slides
             </a>
-
             <a
-            href={slide.file}
-            download
-            style={{
-                flex: 1,
+              href={slide.file}
+              download
+              style={{
+                padding: "10px 28px",
                 textAlign: "center",
                 display: "inline-block",
                 textDecoration: "none",
@@ -104,14 +151,13 @@ function SlideCard({ slide }) {
                 color: "#fff",
                 border: "1px solid rgba(255,255,255,0.3)",
                 borderRadius: 8,
-                padding: "10px 0",
                 fontSize: 13,
                 fontWeight: 600,
-            }}
+              }}
             >
-            Download
+              Download
             </a>
-        </div>
+          </div>
         ) : (
           <div style={{
             textAlign: "center", padding: "10px 0",
