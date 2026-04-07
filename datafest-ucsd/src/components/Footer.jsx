@@ -27,7 +27,7 @@ export function Footer() {
           </button>
         ))}
       </div>
-      <div style={{ color: "#4a6a8a", fontSize: 11, marginTop: 8 }}>
+      <div style={{ color: "#4a6a8a", fontSize: 20, marginTop: 8 }}>
         Built with  ❤️  by Aditya Kalita and Justin James from the UCSD SIG - R&D Team · © 2026
       </div>
     </footer>
