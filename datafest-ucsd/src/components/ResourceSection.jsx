@@ -15,24 +15,24 @@ export function ResourceSection() {
         <SlideCard slide={{
           title: "Workshop 1 Slides",
           description: "UES - Basics of R & Stata + Data Viz Intro",
-          file: "/slides/workshop1.pdf",
-          preview: "/slides/workshop1preview.png",
+          file: "/DataFest-UCSD/slides/workshop1.pdf",
+          preview: "/DataFest-UCSD/slides/workshop1preview.png",
           date: "Jan 16",
           org: "UES",
         }} />
         <SlideCard slide={{
           title: "Workshop 2 Slides",
           description: "SIG - DataFest 2026 Info Meeting",
-          file: "/slides/WorkshopTwo.pdf",
-          preview: "/slides/WorkshopTwoPrev.png",
+          file: "/DataFest-UCSD/slides/WorkshopTwo.pdf",
+          preview: "/DataFest-UCSD/slides/WorkshopTwoPrev.png",
           date: "Jan 30",
           org: "All",
         }} />
         <SlideCard slide={{
           title: "Workshop 3 Slides",
           description: "Intro to Machine Learning",
-          file: "/slides/workshop3.pdf",
-          preview: "/slides/workshop3prev.png",
+          file: "/DataFest-UCSD/slides/workshop3.pdf",
+          preview: "/DataFest-UCSD/slides/workshop3prev.png",
           date: "Feb 13",
           org: "TQT × SIG",
         }} />
