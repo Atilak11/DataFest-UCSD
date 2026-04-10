@@ -6,7 +6,7 @@ const INVOLVEMENT_CARDS = [
     icon: "🎓",
     title: "Undergraduate Students",
     body: "Form a team of 4–5 and register to compete. Fill out the student registration form by April 22nd!!",
-    cta: "Student Interest Form →",
+    cta: "Student Registration Form →",
     color: COLORS.ucsdGold,
     href: "https://urldefense.com/v3/__https://docs.google.com/forms/d/1kOKAb7jfzUvXXYfQMg3dFVdaOVjp4ihc3OO5b4ryqaY/edit__;!!Mih3wA!CmUFCGntwaooVtQtJiT0B3RlYJrOxcCUSSVypRRmDJKKThnuDzdq1yzpDsq9m5YiidWeXHMR4nTzoW2kh8c$"
   },
@@ -117,9 +117,9 @@ function OrganizersPanel() {
           </div>
           {ORGANIZERS.orgs.map((org) => (
             <div key={org.name} style={{ marginBottom: 8 }}>
-              <div style={{ color: "#fff", fontSize: 14, fontWeight: 600 }}>{org.name}</div>
+              <div style={{ color: "#fff", fontSize: 18, fontWeight: 600 }}>{org.name}</div>
               {org.people.map((p) => (
-                <div key={p} style={{ color: "#7a9ab8", fontSize: 12 }}>↳ {p}</div>
+                <div key={p} style={{ color: "#7a9ab8", fontSize: 16 }}>↳ {p}</div>
               ))}
             </div>
           ))}
