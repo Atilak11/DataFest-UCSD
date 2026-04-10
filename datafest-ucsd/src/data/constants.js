@@ -95,8 +95,5 @@ export const ORGANIZERS = {
   ],
   orgs: [
     { name: "Sustainable Investment Group (SIG)", people: ["Jason Oliner, Co-president", "Theodosia Lim, Co-president"] },
-    { name: "Undergraduate Economics Society (UES)", people: ["Jayden Wang"] },
-    { name: "Triton Quantitative Trading (TQT)", people: [] },
-    { name: "Data Science Student Society (DS3)", people: [] },
   ],
 };

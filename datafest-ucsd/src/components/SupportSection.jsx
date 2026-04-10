@@ -5,10 +5,10 @@ const INVOLVEMENT_CARDS = [
   {
     icon: "🎓",
     title: "Undergraduate Students",
-    body: "Form a team of 4–5 and register to compete. Fill out the student interest form to get notified when applications open.",
+    body: "Form a team of 4–5 and register to compete. Fill out the student registration form by April 22nd!!",
     cta: "Student Interest Form →",
     color: COLORS.ucsdGold,
-    href: "https://docs.google.com/forms/d/e/1FAIpQLSdi8G842KgT0iA23eBnhXUAQjvNBHgUlzlPqe-_C-txPXp2Eg/viewform"
+    href: "https://urldefense.com/v3/__https://docs.google.com/forms/d/1kOKAb7jfzUvXXYfQMg3dFVdaOVjp4ihc3OO5b4ryqaY/edit__;!!Mih3wA!CmUFCGntwaooVtQtJiT0B3RlYJrOxcCUSSVypRRmDJKKThnuDzdq1yzpDsq9m5YiidWeXHMR4nTzoW2kh8c$"
   },
   {
     icon: "🧑‍🏫",
@@ -112,7 +112,7 @@ function OrganizersPanel() {
 
         {/* Student orgs */}
         <div>
-          <div style={{ fontSize: 11, color: COLORS.ucsdGold, letterSpacing: 3, fontWeight: 600, textTransform: "uppercase", marginBottom: 12 }}>
+          <div style={{ fontSize: 16, color: COLORS.ucsdGold, letterSpacing: 3, fontWeight: 600, textTransform: "uppercase", marginBottom: 12 }}>
             Student Organizations
           </div>
           {ORGANIZERS.orgs.map((org) => (
