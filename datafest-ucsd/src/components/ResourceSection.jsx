@@ -36,6 +36,22 @@ export function ResourceSection() {
           date: "Feb 13",
           org: "TQT × SIG",
         }} />
+        <SlideCard slide={{
+          title: "Workshop 4 Slides",
+          description: "Working with Data — no slides available",
+          file: null,
+          preview: null,
+          date: "Feb 27",
+          org: "Blake Ellison",
+        }} />
+        <SlideCard slide={{
+          title: "Workshop 5 Slides",
+          description: "Presentation Skills",
+          file: "/DataFest-UCSD/slides/workshop5.pdf",
+          preview: "/DataFest-UCSD/slides/workshop5preview.pdf",
+          previewFile: "/DataFest-UCSD/slides/workshop5preview.pdf",
+          date: "Mar",
+        }} />
       </div>
 
       <div style={{
@@ -59,6 +75,7 @@ export function ResourceSection() {
 
 function SlideCard({ slide }) {
   const isAvailable = !!slide.file;
+  const isPdfPreview = slide.preview?.toLowerCase().endsWith(".pdf");
 
   return (
     <div style={{
@@ -83,17 +100,34 @@ function SlideCard({ slide }) {
         flexShrink: 0,
       }}>
         {slide.preview ? (
-          <img
-            src={slide.preview}
-            alt={`${slide.title} preview`}
-            style={{
-              width: 140,
-              height: 180,
-              objectFit: "contain",
-              borderRadius: 4,
-              display: "block",
-            }}
-          />
+          isPdfPreview ? (
+            <iframe
+              src={slide.preview}
+              title={`${slide.title} preview`}
+              style={{
+                width: 140,
+                height: 180,
+                borderRadius: 4,
+                display: "block",
+                background: "#fff",
+                border: "none",
+                margin: "0 auto",
+              }}
+            />
+          ) : (
+            <img
+              src={slide.preview}
+              alt={`${slide.title} preview`}
+              style={{
+                width: 140,
+                height: 180,
+                objectFit: "contain",
+                borderRadius: 4,
+                display: "block",
+                margin: "0 auto",
+              }}
+            />
+          )
         ) : (
           <div style={{ fontSize: 32 }}>📄</div>
         )}
