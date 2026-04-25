@@ -12,11 +12,11 @@ const INVOLVEMENT_CARDS = [
   },
   {
     icon: "🧑‍🏫",
-    title: "Grad Students, Faculty & Alumni",
-    body: "Volunteer as a mentor! Sign up for 2-hour shifts during the event. Share your expertise and connect with talented undergrads.",
-    cta: "Mentor Interest Form →",
+    title: "DataFest Q&A shared doc",
+    body: "Running form to ask any questions about DataFest - Open to All",
+    cta: "DataFest Q&A DOC →",
     color: "#4caf90",
-    href:"https://docs.google.com/forms/d/e/1FAIpQLSctHVU1EhQMirRkBYfP7rqzvqZqNRkVNf_yUEhxEeUo0o2LRw/viewform"
+    href:"https://docs.google.com/document/d/1MYSVje2g8BXYYlEkYwNm8L6VEXDyPHNKpVy3LLcPtTU/edit?usp=sharing"
   },
   {
     icon: "🏢",
