@@ -41,7 +41,7 @@ export const WORKSHOPS = [
   { date: "Feb 13", day: "Fri", time: "5:30–6:30 PM",          title: "Intro to Machine Learning",               org: "TQT × SIG",   location: "CSB 003",          done: true  },
   { date: "Feb 18", day: "Thu", time: "8:00–10:00 PM",         title: "DS3 – Data Science in Finance",           org: "DS3",          location: "Otterson 1S114",   done: true  },
   { date: "Feb 27", day: "Fri", time: "5:30–6:30 PM",          title: "Working with Data",                       org: "Blake Ellison",location: "CSB 003",          done: true  },
-  { date: "Mar TBD",day: "TBD", time: "TBD",                   title: "Workshop #5 – Presentation Skills",       org: "TBD",          location: "TBD",              done: false },
+  { date: "Mar", day: "TBD", time: "TBD",                      title: "Workshop #5 – Presentation Skills",       org: "TBD",          location: "TBD",              done: false },
   { date: "Apr 24", day: "Fri", time: "Late Afternoon",         title: "DataFest Day 1 – Check-In",               org: "Event",        location: "Price Center East Ballroom", done: false, highlight: true },
   { date: "Apr 25", day: "Sat", time: "All Day",                title: "DataFest Day 2 – Hack!",                  org: "Event",        location: "Malk Hall 5th Floor",        done: false, highlight: true },
   { date: "Apr 26", day: "Sun", time: "Morning – Early Afternoon", title: "DataFest Day 3 – Presentations & Awards", org: "Event",   location: "Malk Hall 5th Floor",        done: false, highlight: true },
